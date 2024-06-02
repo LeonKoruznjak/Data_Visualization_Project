@@ -1,0 +1,182 @@
+/* Fonts */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background color */
+body {
+  background-color: whitesmoke; /* Adjust the color as needed */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon img {
+  width: 50px; /* Adjust the size of the icon */
+  height: 50px; /* Adjust the size of the icon */
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 1.5em; /* Adjust the font size as needed */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 50px; /* Match the height of the icon */
+  margin-right: 30px;
+  color: black;
+}
+
+.boundary {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  font: 14px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Adjusted font */
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 9999; /* Ensure tooltip appears on top of other elements */
+}
+
+.slider {
+  width: 100px; /* Adjust the width as needed */
+  margin: 5px;
+}
+
+.map-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.map-wrapper {
+  flex: 1;
+  height: 100%;
+}
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.graph {
+  width: calc(50% - 5px); /* Adjusted width */
+  height: calc(50% - 5px); /* Adjusted height */
+  margin: 2px;
+  border: 1px solid #000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.sliders-container {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#graph4 {
+  width: 400px;
+  height: 270px; /* Adjust the height as needed */
+  background-color: white;
+}
+
+#graph1 {
+  width: 400px;
+  height: 270px; /* Adjust the height as needed */
+  background-color: white;
+}
+
+#graphs12 {
+  display: flex;
+  height: 300px;
+}
+
+#graph2 {
+  background-color: white;
+  width: 400px;
+  height: 500px; /* Adjust the height as needed */
+  background-color: white;
+}
+
+#graph3 {
+  width: 400px;
+  height: 500px; /* Adjust the height as needed */
+  background-color: white;
+}
+
+#graphs34 {
+  display: flex;
+}
+
+#radi {
+  display: flex;
+}
+
+#radi2 {
+  display: flex;
+  align-items: center;
+}
+
+#selectedMonth,
+#selectedYear,
+#selectedDay {
+  margin-left: 5px;
+}
+
+#whole,
+#month {
+  margin-left: 5px;
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popup p {
+  margin: 5px 0;
+}
+
+.popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}

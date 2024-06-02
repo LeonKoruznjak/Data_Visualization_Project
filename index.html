@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chicago Crime Map</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header with title and icon -->
+    <header class="header">
+      <div class="header-icon">
+        <!-- Add your icon image source here -->
+        <img src="icon.png" alt="Icon" />
+      </div>
+      <h1 class="header-title">CCVP - Chicago Crime Visualization Project</h1>
+      <div class="header-icon">
+        <!-- Add your icon image source here -->
+        <img src="icon.png" alt="Icon" />
+      </div>
+    </header>
+
+    <div class="map-container">
+      <div class="map-wrapper">
+        <div id="popup-container"></div>
+        <div id="map"></div>
+        <div class="tooltip" style="opacity: 0"></div>
+        <div class="sliders-container">
+          <div class="slider">
+            <div id="radi">
+              <label for="monthSlider">Month:</label>
+              <span id="selectedMonth">January</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="11"
+              value="0"
+              class="slider"
+              id="monthSlider"
+            />
+          </div>
+          <div class="slider">
+            <div id="radi">
+              <label for="yearSlider">Year:</label>
+              <span id="selectedYear">2015</span>
+            </div>
+
+            <input
+              type="range"
+              min="2015"
+              max="2017"
+              value="2015"
+              class="slider"
+              id="yearSlider"
+            />
+          </div>
+          <div class="slider">
+            <div id="radi">
+              <label for="daySlider">Day:</label>
+              <span id="selectedDay">1</span>
+            </div>
+
+            <input
+              type="range"
+              min="1"
+              max="31"
+              value="1"
+              class="slider"
+              id="daySlider"
+            />
+            <div id="radi2">
+              <input type="checkbox" id="wholeMonth" />
+              <p id="whole">Whole</p>
+              <p id="month">Month</p>
+            </div>
+            <div class="slider">
+              <label for="crimeType">Crime Type:</label>
+              <select id="crimeType">
+                <option value="all">All</option>
+                <option value="THEFT">THEFT</option>
+                <option value="WEAPONS VIOLATION">WEAPONS VIOLATION</option>
+                <option value="DECEPTIVE PRACTICE">DECEPTIVE PRACTICE</option>
+                <option value="MOTOR VEHICLE THEFT">MOTOR VEHICLE THEFT</option>
+                <option value="OTHER OFFENSE">OTHER OFFENSE</option>
+                <option value="BURGLARY">BURGLARY</option>
+                <option value="BATTERY">BATTERY</option>
+                <option value="ASSAULT">ASSAULT</option>
+                <option value="ROBBERY">ROBBERY</option>
+                <option value="NARCOTICS">NARCOTICS</option>
+                <option value="CRIMINAL DAMAGE">CRIMINAL DAMAGE</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph-container">
+        <div class="graph-container_1" id="graphs12">
+          <div class="graph" id="graph4"></div>
+          <div class="graph" id="graph1"></div>
+        </div>
+        <div class="graph-container_2" id="graphs34">
+          <div class="graph" id="graph3"></div>
+          <div class="graph" id="graph2"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

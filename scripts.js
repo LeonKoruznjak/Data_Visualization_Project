@@ -561,6 +561,9 @@ d3.json("chicago.geojson")
             .attr("height", 0) // Initially zero height
             .attr("fill", "steelblue")
             .on("mouseover", function (event, d) {
+              // Change color to orange on hover
+              d3.select(this).attr("fill", "orange");
+
               // Show tooltip on hover
               tooltip.transition().duration(200).style("opacity", 0.9);
               tooltip
@@ -569,6 +572,9 @@ d3.json("chicago.geojson")
                 .style("top", event.pageY - 20 + "px");
             })
             .on("mouseout", function () {
+              // Change color back to steelblue
+              d3.select(this).attr("fill", "steelblue");
+
               // Hide tooltip on mouseout
               tooltip.transition().duration(500).style("opacity", 0);
             })
@@ -588,10 +594,17 @@ d3.json("chicago.geojson")
             )
             .call(d3.axisBottom(x))
             .selectAll("text")
-            .attr("transform", "rotate(-50)") // Rotate text at -30 degrees
+            .attr("transform", "rotate(-50)") // Rotate text at -50 degrees
             .style("text-anchor", "end"); // Align text to the end
 
           svg.append("g").call(d3.axisLeft(y));
+
+          // Tooltip handling
+          const tooltip = d3
+            .select("#graph3")
+            .append("div")
+            .style("opacity", 0)
+            .attr("class", "tooltip");
 
           svg
             .append("text")
